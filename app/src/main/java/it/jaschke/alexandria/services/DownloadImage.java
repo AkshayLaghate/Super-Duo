@@ -27,6 +27,7 @@ public class DownloadImage extends AsyncTask<String, Void, Bitmap> {
         } catch (Exception e) {
             Log.e("Error", e.getMessage());
             e.printStackTrace();
+
         }
         return bookCover;
     }
