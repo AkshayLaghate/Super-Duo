@@ -34,10 +34,11 @@
                     android:textSize="@dimen/head_line"
                     android:textStyle="bold" />
 
+                <!-- Changed layout height to 80dp for consistency in layout. -->
                 <ImageView
                     android:id="@+id/fullBookCover"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="80dp"
                     android:layout_alignLeft="@+id/fullBookTitle"
                     android:layout_alignStart="@+id/fullBookTitle"
                     android:layout_below="@+id/fullBookTitle"
@@ -57,12 +58,12 @@
                     android:maxLines="5"
                     android:textSize="18sp" />
 
-                <!-- Changed to below fullBookSubTitle from below fullBookCover for better layout. -->
+
                 <TextView
                     android:id="@+id/fullBookDesc"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/fullBookSubTitle"
+                    android:layout_below="@+id/fullBookCover"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="10dp"
                     android:ellipsize="end" />
