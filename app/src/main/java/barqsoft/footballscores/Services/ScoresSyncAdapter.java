@@ -1,4 +1,4 @@
-package barqsoft.footballscores.widget;
+package barqsoft.footballscores.Services;
 
 import android.accounts.Account;
 import android.content.AbstractThreadedSyncAdapter;
@@ -27,16 +27,14 @@ import java.util.Date;
 import java.util.TimeZone;
 import java.util.Vector;
 
+import barqsoft.footballscores.Data.DatabaseContract;
+import barqsoft.footballscores.Data.Fixture;
+import barqsoft.footballscores.Data.FootballScoresProvider;
 import barqsoft.footballscores.R;
-import barqsoft.footballscores.Services.FetchData;
-import barqsoft.footballscores.Services.Team;
 import barqsoft.footballscores.Utilities;
-import barqsoft.footballscores.provider.DatabaseContract;
-import barqsoft.footballscores.provider.Fixture;
-import barqsoft.footballscores.provider.FootballScoresProvider;
 
 /**
- * Created by Andrés on 9/11/15.
+ * Created by Akki on 24/10/15.
  */
 public class ScoresSyncAdapter extends AbstractThreadedSyncAdapter {
 
@@ -53,7 +51,7 @@ public class ScoresSyncAdapter extends AbstractThreadedSyncAdapter {
         Bundle bundle = new Bundle();
         bundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
         bundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
-        ContentResolver.requestSync(AccountUtils.createSyncAccount(context), AccountUtils.AUTHORITY, bundle);
+        ContentResolver.requestSync(AccountOptions.createSyncAccount(context), AccountOptions.AUTHORITY, bundle);
     }
 
     @Override
@@ -291,17 +289,17 @@ public class ScoresSyncAdapter extends AbstractThreadedSyncAdapter {
                     }
 
                     //Save teams if required
-                    barqsoft.footballscores.provider.Team team;
+                    barqsoft.footballscores.Data.Team team;
                     ContentResolver contentResolver = getContext().getContentResolver();
                     //Home team
-                    team = barqsoft.footballscores.provider.Team.withId(contentResolver, homeId);
+                    team = barqsoft.footballscores.Data.Team.withId(contentResolver, homeId);
                     if (team == null)
-                        barqsoft.footballscores.provider.Team.save(contentResolver, homeId, homeName, "");
+                        barqsoft.footballscores.Data.Team.save(contentResolver, homeId, homeName, "");
 
                     //Away team
-                    team = barqsoft.footballscores.provider.Team.withId(contentResolver, awayId);
+                    team = barqsoft.footballscores.Data.Team.withId(contentResolver, awayId);
                     if (team == null)
-                        barqsoft.footballscores.provider.Team.save(contentResolver, awayId, awayName, "");
+                        barqsoft.footballscores.Data.Team.save(contentResolver, awayId, awayName, "");
 
                     //Save fixture
                     Fixture.save(
@@ -333,12 +331,12 @@ public class ScoresSyncAdapter extends AbstractThreadedSyncAdapter {
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            barqsoft.footballscores.provider.Team team = barqsoft.footballscores.provider.Team.fromCursor(cursor);
+            barqsoft.footballscores.Data.Team team = barqsoft.footballscores.Data.Team.fromCursor(cursor);
 
             try {
                 Team response = new FetchData().getTeamInformation(mApiKey, team.id);
                 if (response != null && response.crestUrl != null && response.crestUrl.length() > 0) {
-                    barqsoft.footballscores.provider.Team.save(getContext().getContentResolver(), team.id, team.name, response.crestUrl);
+                    barqsoft.footballscores.Data.Team.save(getContext().getContentResolver(), team.id, team.name, response.crestUrl);
                 }
             } catch (Exception e) {
                 e.printStackTrace();

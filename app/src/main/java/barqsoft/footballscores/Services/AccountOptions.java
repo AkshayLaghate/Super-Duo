@@ -1,4 +1,4 @@
-package barqsoft.footballscores.widget;
+package barqsoft.footballscores.Services;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -11,11 +11,10 @@ import android.util.Log;
 import java.util.List;
 
 /**
- * Created by Andrés on 9/11/15.
+ * Created by Akki on 24/10/15.
  */
-public class AccountUtils {
-
-    public static final String LOG_TAG = AccountUtils.class.getSimpleName();
+public class AccountOptions {
+    public static final String LOG_TAG = AccountOptions.class.getSimpleName();
 
     public static final String AUTHORITY = "barqsoft.footballscores";
     public static final String ACCOUNT_TYPE = "barqsoft.footballscores";
@@ -31,7 +30,7 @@ public class AccountUtils {
 
     public static Account createSyncAccount(Context context) {
 
-        Account newAccount = AccountUtils.getAccount();
+        Account newAccount = AccountOptions.getAccount();
         AccountManager accountManager = (AccountManager) context.getSystemService(Context.ACCOUNT_SERVICE);
 
         if (accountManager.addAccountExplicitly(newAccount, null, null)) {
@@ -51,5 +50,4 @@ public class AccountUtils {
     public static boolean isSyncing() {
         return ContentResolver.isSyncActive(getAccount(), AUTHORITY);
     }
-
 }

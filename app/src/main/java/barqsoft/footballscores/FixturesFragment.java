@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -20,9 +19,9 @@ import android.widget.TextView;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 
-import barqsoft.footballscores.provider.DatabaseContract;
-import barqsoft.footballscores.provider.FixtureAndTeam;
-import barqsoft.footballscores.provider.FootballScoresProvider;
+import barqsoft.footballscores.Data.DatabaseContract;
+import barqsoft.footballscores.Data.FixtureAndTeam;
+import barqsoft.footballscores.Data.FootballScoresProvider;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -43,8 +42,6 @@ public class FixturesFragment extends Fragment
     ListView mListView;
     @Bind(R.id.error_view)
     LinearLayout mErrorView;
-    @Bind(R.id.error_image)
-    ImageView mErrorImage;
     @Bind(R.id.error_message)
     TextView mErrorMessage;
 
@@ -123,7 +120,6 @@ public class FixturesFragment extends Fragment
             if (cursor.getCount() > 0) {
                 mErrorView.setVisibility(View.GONE);
             } else {
-                mErrorImage.setImageResource(R.drawable.ic_no_fixtures_for_day);
                 mErrorMessage.setText("No matches on this date.");
                 mErrorView.setVisibility(View.VISIBLE);
             }

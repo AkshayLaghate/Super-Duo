@@ -22,7 +22,7 @@ import com.caverock.androidsvg.SVG;
 
 import java.io.InputStream;
 
-import barqsoft.footballscores.provider.FixtureAndTeam;
+import barqsoft.footballscores.Data.FixtureAndTeam;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -30,9 +30,6 @@ import butterknife.ButterKnife;
  * Created by yehya khaled on 2/26/2015.
  */
 public class FixturesCursorAdapter extends CursorAdapter {
-
-    public static final String LOG_TAG = FixturesCursorAdapter.class.getSimpleName();
-
 
     public FixturesCursorAdapter(Context context, Cursor cursor, int flags) {
         super(context, cursor, flags);
@@ -49,7 +46,7 @@ public class FixturesCursorAdapter extends CursorAdapter {
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        View view = LayoutInflater.from(context).inflate(R.layout.list_item_fixture, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false);
         ViewHolder mHolder = new ViewHolder(view);
         view.setTag(mHolder);
 
@@ -83,11 +80,11 @@ public class FixturesCursorAdapter extends CursorAdapter {
                     .listener(new SvgSoftwareLayerSetter<Uri>())
                     .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                     .load(Uri.parse(fixtureAndTeam.homeTeamCrestUrl))
-                    .placeholder(R.drawable.placeholder_crest)
-                    .error(R.drawable.placeholder_crest)
+                    .placeholder(R.drawable.ic_black_crest_hi)
+                    .error(R.drawable.ic_black_crest_hi)
                     .into(mHolder.homeTeamCrest);
         else
-            mHolder.homeTeamCrest.setImageResource(R.drawable.placeholder_crest);
+            mHolder.homeTeamCrest.setImageResource(R.drawable.ic_black_crest_hi);
 
         //Away team data
         mHolder.awayTeamName.setText(fixtureAndTeam.awayTeamName);
@@ -104,11 +101,11 @@ public class FixturesCursorAdapter extends CursorAdapter {
                     .listener(new SvgSoftwareLayerSetter<Uri>())
                     .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                     .load(Uri.parse(fixtureAndTeam.awayTeamCrestUrl))
-                    .placeholder(R.drawable.placeholder_crest)
-                    .error(R.drawable.placeholder_crest)
+                    .placeholder(R.drawable.ic_black_crest_hi)
+                    .error(R.drawable.ic_black_crest_hi)
                     .into(mHolder.awayTeamCrest);
         else
-            mHolder.awayTeamCrest.setImageResource(R.drawable.placeholder_crest);
+            mHolder.awayTeamCrest.setImageResource(R.drawable.ic_black_crest_hi);
 
     }
 

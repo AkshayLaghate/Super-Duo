@@ -1,4 +1,4 @@
-package barqsoft.footballscores.provider;
+package barqsoft.footballscores.Data;
 
 import android.net.Uri;
 import android.provider.BaseColumns;

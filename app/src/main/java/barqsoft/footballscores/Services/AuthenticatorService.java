@@ -1,4 +1,4 @@
-package barqsoft.footballscores.widget;
+package barqsoft.footballscores.Services;
 
 import android.app.Service;
 import android.content.Intent;
@@ -6,16 +6,15 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 
 /**
- * Created by Andrés on 9/11/15.
+ * Created by Akki on 24/10/15.
  */
-public class ScoresAuthenticatorService extends Service {
-
-    ScoresAuthenticator mAuthenticator;
+public class AuthenticatorService extends Service {
+    Authenticator mAuthenticator;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mAuthenticator = new ScoresAuthenticator(this);
+        mAuthenticator = new Authenticator(this);
     }
 
     @Nullable

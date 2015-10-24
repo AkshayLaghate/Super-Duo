@@ -1,4 +1,4 @@
-package barqsoft.footballscores.provider;
+package barqsoft.footballscores.Data;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;

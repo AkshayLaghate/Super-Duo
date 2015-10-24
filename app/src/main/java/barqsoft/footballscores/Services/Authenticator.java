@@ -1,4 +1,4 @@
-package barqsoft.footballscores.widget;
+package barqsoft.footballscores.Services;
 
 import android.accounts.AbstractAccountAuthenticator;
 import android.accounts.Account;
@@ -8,11 +8,10 @@ import android.content.Context;
 import android.os.Bundle;
 
 /**
- * Created by Andrés on 9/11/15.
+ * Created by Akki on 24/10/15.
  */
-public class ScoresAuthenticator extends AbstractAccountAuthenticator {
-
-    public ScoresAuthenticator(Context context) {
+public class Authenticator extends AbstractAccountAuthenticator {
+    public Authenticator(Context context) {
         super(context);
     }
 

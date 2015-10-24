@@ -14,10 +14,10 @@ import org.joda.time.format.DateTimeFormat;
 
 import java.util.ArrayList;
 
+import barqsoft.footballscores.Data.DatabaseContract;
+import barqsoft.footballscores.Data.FixtureAndTeam;
+import barqsoft.footballscores.Data.FootballScoresProvider;
 import barqsoft.footballscores.R;
-import barqsoft.footballscores.provider.DatabaseContract;
-import barqsoft.footballscores.provider.FixtureAndTeam;
-import barqsoft.footballscores.provider.FootballScoresProvider;
 
 /**
  * Created by Andrés on 9/22/15.
