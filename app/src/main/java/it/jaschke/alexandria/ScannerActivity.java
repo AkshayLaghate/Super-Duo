@@ -3,9 +3,17 @@ package it.jaschke.alexandria;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -14,13 +22,19 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
  */
 public class ScannerActivity extends Activity implements ZXingScannerView.ResultHandler {
     private ZXingScannerView mScannerView;
+    List<BarcodeFormat> formats;
 
     @Override
     public void onCreate(Bundle state) {
         super.onCreate(state);
-        mScannerView = new ZXingScannerView(this);   // Programmatically initialize the scanner view
+        formats = new ArrayList<>();
+        formats.add(BarcodeFormat.EAN_13);
+        formats.add(BarcodeFormat.EAN_8);
+        mScannerView = new ZXingScannerView(this);// Programmatically initialize the scanner view
+        mScannerView.setFormats(formats);
         setContentView(mScannerView);                // Set the scanner view as the content view
     }
+
 
     @Override
     public void onResume() {
