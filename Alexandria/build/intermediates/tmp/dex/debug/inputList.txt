@@ -1,0 +1,9 @@
+/Users/Akki/Downloads/alexandria/app/build/intermediates/coverage-instrumented-classes/debug
+/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-0703b3589b9f6e7af1aaa2eb9f21ec10cec14c1e.jar
+/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/classes-4e91885d696552d140f65c214859dc3165be293b.jar
+/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/classes-189eb821bbfd28ca2237f0483c117c260ce02de2.jar
+/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-cfa62c14a921e1d4ca65da98ad2b8b21b49248ae.jar
+/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/jacocoagent-de2927f4e373b0e10b8a308d4163f0b16ccc01b5.jar
+/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/classes-79684457924f199803c8cf5a3f95ed66ffaa019d.jar
+/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/core-3.2.0-5a42ed2cb9f3b1de22185e513b63b2bce42efd95.jar
+/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/classes-6b56cda145eacbcf2ebb32f52b1272106a647015.jar

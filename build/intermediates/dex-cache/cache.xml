@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Akki/Downloads/alexandria/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/classes-79684457924f199803c8cf5a3f95ed66ffaa019d.jar" />
+    </item>
+    <item
+        jar="/Users/Akki/Desktop/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-0703b3589b9f6e7af1aaa2eb9f21ec10cec14c1e.jar" />
+    </item>
+    <item
+        jar="/Users/Akki/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.0/e019d15a13a9786f881141d2df6654b8510bce8b/core-3.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e019d15a13a9786f881141d2df6654b8510bce8b">
+        <dex dex="/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/core-3.2.0-5a42ed2cb9f3b1de22185e513b63b2bce42efd95.jar" />
+    </item>
+    <item
+        jar="/Users/Akki/Downloads/alexandria/app/build/intermediates/exploded-aar/me.dm7.barcodescanner/zxing/1.8.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c87c4f493c82d2de01bddf6b1084c92dd670b053">
+        <dex dex="/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/classes-4e91885d696552d140f65c214859dc3165be293b.jar" />
+    </item>
+    <item
+        jar="/Users/Akki/Downloads/alexandria/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-cfa62c14a921e1d4ca65da98ad2b8b21b49248ae.jar" />
+    </item>
+    <item
+        jar="/Users/Akki/Downloads/alexandria/app/build/intermediates/exploded-aar/me.dm7.barcodescanner/core/1.8.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="96c83d4de6289a3f674165f896ac992564a7138d">
+        <dex dex="/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/classes-189eb821bbfd28ca2237f0483c117c260ce02de2.jar" />
+    </item>
+    <item
+        jar="/Users/Akki/Downloads/alexandria/app/build/intermediates/jacoco/jacocoagent.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="05d4f9e6f36f58a60dc65a4b1af30ee76201a530">
+        <dex dex="/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/jacocoagent-de2927f4e373b0e10b8a308d4163f0b16ccc01b5.jar" />
+    </item>
+    <item
+        jar="/Users/Akki/Downloads/alexandria/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Akki/Downloads/alexandria/app/build/intermediates/pre-dexed/debug/classes-6b56cda145eacbcf2ebb32f52b1272106a647015.jar" />
+    </item>
+
+</items>
