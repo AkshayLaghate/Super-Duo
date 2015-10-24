@@ -14,9 +14,9 @@
         android:layout_height="match_parent"
         android:layout_margin="8dp"
         android:background="#ffffff"
-        android:contentDescription="No matches on this date."
+        android:contentDescription="@string/error_msg"
         android:gravity="center"
-        android:text="No matches on this date."
+        android:text="@string/error_msg"
         android:textColor="#111111"
         android:textSize="18sp" />
 
