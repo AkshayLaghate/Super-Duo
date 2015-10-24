@@ -11,6 +11,7 @@
     <android.support.v7.widget.GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layoutDirection="locale"
         android:paddingBottom="8dp"
         android:paddingEnd="16dp"
         android:paddingLeft="16dp"
