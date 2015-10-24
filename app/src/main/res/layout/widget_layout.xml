@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin">
+
+    <ListView
+        android:id="@+id/fixtures_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:background="#ffffff"
+        android:contentDescription="No matches on this date."
+        android:gravity="center"
+        android:text="No matches on this date."
+        android:textColor="#111111"
+        android:textSize="18sp" />
+
+</FrameLayout>
